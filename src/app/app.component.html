@@ -1,0 +1,17 @@
+<div class="calculator">
+  <div>
+    <div class="result">{{display}}</div>
+    <div class="line" *ngFor="let line of numbers">
+      <div class="number" *ngFor="let number of line" (click)="click(number)">
+        {{number}}
+      </div>
+    </div>
+    <div class="clear" (click)="clear()">CLEAR</div>
+  </div>
+
+  <div>
+    <div class="number" *ngFor="let operator of operators" (click)="click(operator)">
+      {{operator}}
+    </div>
+  </div>
+</div>
